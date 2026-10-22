@@ -1,0 +1,54 @@
+name: Daily iGaming jobs refresh & publish
+on:
+  schedule:
+    - cron: '13 8 * * *'
+      timezone: 'Europe/Bucharest'
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'public/**'
+      - 'scripts/**'
+      - '.github/workflows/**'
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+concurrency:
+  group: gh-pages
+  cancel-in-progress: false
+
+jobs:
+  refresh-and-deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Refresh publicly accessible job feeds
+        run: python scripts/update_jobs.py
+      - name: Save snapshot for deduplication and historical first-seen dates
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add public/data/jobs.json
+          if ! git diff --cached --quiet; then
+            git commit -m 'chore: daily public job-feed snapshot'
+            git push
+          fi
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
+      - name: Upload website
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: public
+      - name: Publish live website
+        id: deployment
+        uses: actions/deploy-pages@v4
