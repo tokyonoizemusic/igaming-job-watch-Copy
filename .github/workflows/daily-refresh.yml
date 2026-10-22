@@ -27,9 +27,12 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - name: Check out repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
+        with:
+          ref: main
+          fetch-depth: 0
       - name: Set up Python
-        uses: actions/setup-python@v5
+        uses: actions/setup-python@v6
         with:
           python-version: '3.12'
       - name: Refresh publicly accessible job feeds
@@ -41,7 +44,11 @@ jobs:
           git add public/data/jobs.json
           if ! git diff --cached --quiet; then
             git commit -m 'chore: daily public job-feed snapshot'
-            git push
+            # Bring in any changes committed after this job started.
+            # Do not force-push or overwrite changes made on GitHub.
+            git fetch origin main
+            git rebase origin/main
+            git push origin HEAD:main
           fi
       - name: Configure Pages
         uses: actions/configure-pages@v5
