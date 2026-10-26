@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-10-26T17:13:36+00:00",
+  "checked_at": "2026-10-26T17:14:41+00:00",
   "timezone": "Europe/Bucharest",
   "sources": [
     {
@@ -51,6 +51,14 @@
       "error": ""
     },
     {
+      "company": "Hacksaw Gaming",
+      "type": "career-page",
+      "ok": true,
+      "matches": 0,
+      "coverage": "HTML/job structured data where publicly available",
+      "error": ""
+    },
+    {
       "company": "Relax Gaming",
       "type": "career-page",
       "ok": true,
@@ -59,7 +67,15 @@
       "error": ""
     },
     {
-      "company": "Hacksaw Gaming",
+      "company": "Games Global",
+      "type": "career-page",
+      "ok": true,
+      "matches": 0,
+      "coverage": "HTML/job structured data where publicly available",
+      "error": ""
+    },
+    {
+      "company": "RubyPlay",
       "type": "career-page",
       "ok": true,
       "matches": 0,
@@ -75,31 +91,7 @@
       "error": ""
     },
     {
-      "company": "RubyPlay",
-      "type": "career-page",
-      "ok": true,
-      "matches": 0,
-      "coverage": "HTML/job structured data where publicly available",
-      "error": ""
-    },
-    {
-      "company": "Games Global",
-      "type": "career-page",
-      "ok": true,
-      "matches": 0,
-      "coverage": "HTML/job structured data where publicly available",
-      "error": ""
-    },
-    {
       "company": "Bragg Gaming",
-      "type": "career-page",
-      "ok": true,
-      "matches": 0,
-      "coverage": "HTML/job structured data where publicly available",
-      "error": ""
-    },
-    {
-      "company": "Play'n GO",
       "type": "career-page",
       "ok": true,
       "matches": 0,
@@ -115,7 +107,23 @@
       "error": ""
     },
     {
+      "company": "Play'n GO",
+      "type": "career-page",
+      "ok": true,
+      "matches": 0,
+      "coverage": "HTML/job structured data where publicly available",
+      "error": ""
+    },
+    {
       "company": "Thunderkick",
+      "type": "career-page",
+      "ok": true,
+      "matches": 0,
+      "coverage": "HTML/job structured data where publicly available",
+      "error": ""
+    },
+    {
+      "company": "ELK Studios",
       "type": "career-page",
       "ok": true,
       "matches": 0,
@@ -131,7 +139,7 @@
       "error": ""
     },
     {
-      "company": "Blueprint Gaming",
+      "company": "Quickspin",
       "type": "career-page",
       "ok": true,
       "matches": 0,
@@ -139,7 +147,7 @@
       "error": ""
     },
     {
-      "company": "Quickspin",
+      "company": "Blueprint Gaming",
       "type": "career-page",
       "ok": true,
       "matches": 0,
@@ -163,7 +171,7 @@
       "error": ""
     },
     {
-      "company": "ELK Studios",
+      "company": "EveryMatrix",
       "type": "career-page",
       "ok": true,
       "matches": 0,
@@ -179,14 +187,6 @@
       "error": ""
     },
     {
-      "company": "Kaizen Gaming",
-      "type": "career-page",
-      "ok": true,
-      "matches": 0,
-      "coverage": "HTML/job structured data where publicly available",
-      "error": ""
-    },
-    {
       "company": "Gamdom",
       "type": "career-page",
       "ok": true,
@@ -195,34 +195,18 @@
       "error": ""
     },
     {
+      "company": "Kaizen Gaming",
+      "type": "career-page",
+      "ok": true,
+      "matches": 0,
+      "coverage": "HTML/job structured data where publicly available",
+      "error": ""
+    },
+    {
       "company": "Kendoo",
       "type": "career-page",
       "ok": true,
       "matches": 2,
-      "coverage": "HTML/job structured data where publicly available",
-      "error": ""
-    },
-    {
-      "company": "ARRISE",
-      "type": "career-page",
-      "ok": true,
-      "matches": 3,
-      "coverage": "HTML/job structured data where publicly available",
-      "error": ""
-    },
-    {
-      "company": "EveryMatrix",
-      "type": "career-page",
-      "ok": true,
-      "matches": 0,
-      "coverage": "HTML/job structured data where publicly available",
-      "error": ""
-    },
-    {
-      "company": "LeoVegas",
-      "type": "career-page",
-      "ok": true,
-      "matches": 0,
       "coverage": "HTML/job structured data where publicly available",
       "error": ""
     },
@@ -236,6 +220,22 @@
     },
     {
       "company": "Yggdrasil",
+      "type": "career-page",
+      "ok": true,
+      "matches": 0,
+      "coverage": "HTML/job structured data where publicly available",
+      "error": ""
+    },
+    {
+      "company": "ARRISE",
+      "type": "career-page",
+      "ok": true,
+      "matches": 3,
+      "coverage": "HTML/job structured data where publicly available",
+      "error": ""
+    },
+    {
+      "company": "LeoVegas",
       "type": "career-page",
       "ok": true,
       "matches": 0,
