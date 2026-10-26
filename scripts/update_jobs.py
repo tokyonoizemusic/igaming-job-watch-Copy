@@ -12,6 +12,8 @@ import sys
 import time
 import urllib.error
 import urllib.request
+from concurrent.futures import ThreadPoolExecutor, as_completed
+from sources_extra import CAREER_PAGES, collect_careers, linkedin_rss_sources, fetch_text, collect_rss
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -201,8 +203,44 @@ def main():
                 jobs.append(j)
             status.append({'company':source['name'],'type':source['type'],'ok':False,'matches':0,'error':'Source temporarily unavailable'})
         time.sleep(0.1)
+    # Additional public employer careers pages (no credentials, no LinkedIn HTML scraping).
+    # Some pages are JS-only; an empty extraction is NOT an absence-of-vacancies claim.
+    def check_career(entry):
+        company,url=entry
+        try:return (company, collect_careers(company,url), None)
+        except Exception as exc:return (company,[],str(exc))
+    print(f'Checking {len(CAREER_PAGES)} extra public career pages …')
+    with ThreadPoolExecutor(max_workers=6) as pool:
+        for future in as_completed([pool.submit(check_career, entry) for entry in CAREER_PAGES]):
+            company,entries,error=future.result()
+            status.append({'company':company,'type':'career-page','ok':not bool(error),'matches':len(entries),
+                           'coverage':'HTML/job structured data where publicly available','error':'Page inaccessible or unsupported' if error else ''})
+            if error:print(f'WARNING careers page {company}: {error[:130]}',file=sys.stderr)
+            for j in entries:
+                old=prev_by_id.get(j['id']) or {}
+                j['firstSeen']=old.get('firstSeen') or TODAY
+                j['added']=old.get('added') or j['firstSeen']
+                jobs.append(j)
+    # Best-effort search-engine index discovery. NEVER call linkedin.com itself.
+    # No search source being blocked may be represented as an absence of jobs.
+    for name,url in linkedin_rss_sources():
+        try:
+            txt,_,_=fetch_text(url,timeout=12)
+            entries=collect_rss(txt,name)
+            for j in entries:
+                old=prev_by_id.get(j['id']) or {}
+                j['firstSeen']=old.get('firstSeen') or TODAY
+                j['added']=old.get('added') or j['firstSeen']
+                jobs.append(j)
+            status.append({'company':name,'type':'linkedin-indexed-rss','ok':True,'matches':len(entries),
+                           'coverage':'Search-index lead discovery, not direct LinkedIn vacancy verification'})
+        except Exception as exc:
+            status.append({'company':name,'type':'linkedin-indexed-rss','ok':False,'matches':0,
+                           'error':'RSS unavailable; LinkedIn search shortcuts remain available'})
+            print(f'WARNING {name}: {exc}',file=sys.stderr)
+        time.sleep(0.15)
     unique={j['id']:j for j in jobs}
-    output={'checked_at':STAMP,'timezone':'Europe/Bucharest','sources':status,'jobs':sorted(unique.values(),key=lambda j:(j.get('firstSeen',''),j.get('company','')),reverse=True)}
+    output={'checked_at':STAMP,'timezone':'Europe/Bucharest','sources':status,'watchlist_count':len(SOURCES)+len(CAREER_PAGES),'linkedin_discovery':'Best-effort RSS search index; not direct LinkedIn access or vacancy verification','jobs':sorted(unique.values(),key=lambda j:(j.get('firstSeen',''),j.get('company','')),reverse=True)}
     OUT.parent.mkdir(parents=True,exist_ok=True)
     OUT.write_text(json.dumps(output,ensure_ascii=False,indent=2)+'\n', encoding='utf-8')
     print('Total',len(unique),'matching positions; sources',status)
