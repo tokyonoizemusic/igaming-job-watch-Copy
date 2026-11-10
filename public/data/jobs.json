@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-11-09T07:39:10+00:00",
+  "checked_at": "2026-11-10T07:23:48+00:00",
   "timezone": "Europe/Bucharest",
   "sources": [
     {
@@ -18,7 +18,7 @@
       "company": "Playtech",
       "type": "smartrecruiters",
       "ok": true,
-      "matches": 4
+      "matches": 5
     },
     {
       "company": "Enjoy Gaming",
@@ -59,14 +59,6 @@
       "error": ""
     },
     {
-      "company": "Games Global",
-      "type": "career-page",
-      "ok": true,
-      "matches": 0,
-      "coverage": "HTML/job structured data where publicly available",
-      "error": ""
-    },
-    {
       "company": "Booming Games",
       "type": "career-page",
       "ok": true,
@@ -83,10 +75,10 @@
       "error": ""
     },
     {
-      "company": "Relax Gaming",
+      "company": "Games Global",
       "type": "career-page",
       "ok": true,
-      "matches": 2,
+      "matches": 0,
       "coverage": "HTML/job structured data where publicly available",
       "error": ""
     },
@@ -99,15 +91,15 @@
       "error": ""
     },
     {
-      "company": "Play'n GO",
+      "company": "Relax Gaming",
       "type": "career-page",
       "ok": true,
-      "matches": 0,
+      "matches": 2,
       "coverage": "HTML/job structured data where publicly available",
       "error": ""
     },
     {
-      "company": "Greentube",
+      "company": "Play'n GO",
       "type": "career-page",
       "ok": true,
       "matches": 0,
@@ -131,7 +123,7 @@
       "error": ""
     },
     {
-      "company": "Blueprint Gaming",
+      "company": "Greentube",
       "type": "career-page",
       "ok": true,
       "matches": 0,
@@ -139,7 +131,7 @@
       "error": ""
     },
     {
-      "company": "Wazdan",
+      "company": "Blueprint Gaming",
       "type": "career-page",
       "ok": true,
       "matches": 0,
@@ -155,7 +147,7 @@
       "error": ""
     },
     {
-      "company": "Entain",
+      "company": "Wazdan",
       "type": "career-page",
       "ok": true,
       "matches": 0,
@@ -171,6 +163,14 @@
       "error": ""
     },
     {
+      "company": "Entain",
+      "type": "career-page",
+      "ok": true,
+      "matches": 0,
+      "coverage": "HTML/job structured data where publicly available",
+      "error": ""
+    },
+    {
       "company": "CLAWBUSTER",
       "type": "career-page",
       "ok": true,
@@ -179,7 +179,31 @@
       "error": ""
     },
     {
+      "company": "Kaizen Gaming",
+      "type": "career-page",
+      "ok": true,
+      "matches": 0,
+      "coverage": "HTML/job structured data where publicly available",
+      "error": ""
+    },
+    {
       "company": "EveryMatrix",
+      "type": "career-page",
+      "ok": true,
+      "matches": 0,
+      "coverage": "HTML/job structured data where publicly available",
+      "error": ""
+    },
+    {
+      "company": "ARRISE",
+      "type": "career-page",
+      "ok": true,
+      "matches": 2,
+      "coverage": "HTML/job structured data where publicly available",
+      "error": ""
+    },
+    {
+      "company": "Yggdrasil",
       "type": "career-page",
       "ok": true,
       "matches": 0,
@@ -203,22 +227,6 @@
       "error": ""
     },
     {
-      "company": "Kaizen Gaming",
-      "type": "career-page",
-      "ok": true,
-      "matches": 0,
-      "coverage": "HTML/job structured data where publicly available",
-      "error": ""
-    },
-    {
-      "company": "ARRISE",
-      "type": "career-page",
-      "ok": true,
-      "matches": 2,
-      "coverage": "HTML/job structured data where publicly available",
-      "error": ""
-    },
-    {
       "company": "Kendoo",
       "type": "career-page",
       "ok": true,
@@ -228,14 +236,6 @@
     },
     {
       "company": "REEVO",
-      "type": "career-page",
-      "ok": true,
-      "matches": 0,
-      "coverage": "HTML/job structured data where publicly available",
-      "error": ""
-    },
-    {
-      "company": "Yggdrasil",
       "type": "career-page",
       "ok": true,
       "matches": 0,
@@ -275,6 +275,29 @@
   "linkedin_discovery": "Best-effort RSS search index; not direct LinkedIn access or vacancy verification",
   "jobs": [
     {
+      "id": "feed-smartrecruiters-playtech-744000142580249",
+      "company": "Playtech",
+      "title": "Product Manager",
+      "category": "production",
+      "location": "Sofia, bg",
+      "mode": "unknown",
+      "region": "eu",
+      "eligibility": "European location or remote indicated. Cross-border employment from Romania is NOT confirmed.",
+      "fit": "Relevant",
+      "url": "https://jobs.smartrecruiters.com/Playtech/744000142580249",
+      "notes": "Automatic discovery from published employer job board. Check full requirements and country eligibility.",
+      "checked": "2026-11-10",
+      "verified": false,
+      "liveFeed": true,
+      "sourceKind": "automatic",
+      "source": "smartrecruiters",
+      "datePosted": "2026-08-10",
+      "status": "not-started",
+      "saved": false,
+      "added": "2026-11-10",
+      "firstSeen": "2026-11-10"
+    },
+    {
       "id": "careers-0f69f126e3a2fb0d",
       "company": "ARRISE",
       "title": "New Product Game Designer United States Remote English United States Remote",
@@ -286,7 +309,7 @@
       "fit": "Unrated",
       "url": "https://arrise.com/job/job-game-designer-7760/",
       "notes": "Found on public careers page; title/link extracted automatically. Posting and eligibility NOT independently verified.",
-      "checked": "2026-11-09",
+      "checked": "2026-11-10",
       "verified": false,
       "liveFeed": true,
       "sourceKind": "careers-discovery",
@@ -309,7 +332,7 @@
       "fit": "Unrated",
       "url": "https://arrise.com/job/job-senior-project-manager-7590/",
       "notes": "Found on public careers page; title/link extracted automatically. Posting and eligibility NOT independently verified.",
-      "checked": "2026-11-09",
+      "checked": "2026-11-10",
       "verified": false,
       "liveFeed": true,
       "sourceKind": "careers-discovery",
@@ -332,7 +355,7 @@
       "fit": "Strong",
       "url": "https://jobs.smartrecruiters.com/Playtech/744000159877049",
       "notes": "Automatic discovery from published employer job board. Check full requirements and country eligibility.",
-      "checked": "2026-11-09",
+      "checked": "2026-11-10",
       "verified": false,
       "liveFeed": true,
       "sourceKind": "automatic",
@@ -355,7 +378,7 @@
       "fit": "Unrated",
       "url": "https://careers.relax-gaming.com/jobs/8651829-senior-compliance-manager",
       "notes": "Found on public careers page; title/link extracted automatically. Posting and eligibility NOT independently verified.",
-      "checked": "2026-11-09",
+      "checked": "2026-11-10",
       "verified": false,
       "liveFeed": true,
       "sourceKind": "careers-discovery",
@@ -378,7 +401,7 @@
       "fit": "Unrated",
       "url": "https://careers.relax-gaming.com/jobs/8065270-senior-account-manager",
       "notes": "Found on public careers page; title/link extracted automatically. Posting and eligibility NOT independently verified.",
-      "checked": "2026-11-09",
+      "checked": "2026-11-10",
       "verified": false,
       "liveFeed": true,
       "sourceKind": "careers-discovery",
@@ -401,7 +424,7 @@
       "fit": "Unrated",
       "url": "https://pushgaming.teamtailor.com/jobs/8250429-senior-account-manager",
       "notes": "Found on public careers page; title/link extracted automatically. Posting and eligibility NOT independently verified.",
-      "checked": "2026-11-09",
+      "checked": "2026-11-10",
       "verified": false,
       "liveFeed": true,
       "sourceKind": "careers-discovery",
@@ -424,7 +447,7 @@
       "fit": "Unrated",
       "url": "https://kendoo.peopleforce.io/careers/v/247471-game-designer",
       "notes": "Found on public careers page; title/link extracted automatically. Posting and eligibility NOT independently verified.",
-      "checked": "2026-11-09",
+      "checked": "2026-11-10",
       "verified": false,
       "liveFeed": true,
       "sourceKind": "careers-discovery",
@@ -447,7 +470,7 @@
       "fit": "Unrated",
       "url": "https://kendoo.peopleforce.io/careers/v/201172-project-manager",
       "notes": "Found on public careers page; title/link extracted automatically. Posting and eligibility NOT independently verified.",
-      "checked": "2026-11-09",
+      "checked": "2026-11-10",
       "verified": false,
       "liveFeed": true,
       "sourceKind": "careers-discovery",
@@ -470,7 +493,7 @@
       "fit": "Unrated",
       "url": "https://www.gamdomcareers.com/jobs/8571547-product-owner",
       "notes": "Found on public careers page; title/link extracted automatically. Posting and eligibility NOT independently verified.",
-      "checked": "2026-11-09",
+      "checked": "2026-11-10",
       "verified": false,
       "liveFeed": true,
       "sourceKind": "careers-discovery",
@@ -493,7 +516,7 @@
       "fit": "Unrated",
       "url": "https://booming-games.jobs.personio.com/job/2311650?language=en",
       "notes": "Found on public careers page; title/link extracted automatically. Posting and eligibility NOT independently verified.",
-      "checked": "2026-11-09",
+      "checked": "2026-11-10",
       "verified": false,
       "liveFeed": true,
       "sourceKind": "careers-discovery",
@@ -516,7 +539,7 @@
       "fit": "Relevant",
       "url": "https://jobs.smartrecruiters.com/Playtech/744000157480539",
       "notes": "Automatic discovery from published employer job board. Check full requirements and country eligibility.",
-      "checked": "2026-11-09",
+      "checked": "2026-11-10",
       "verified": false,
       "liveFeed": true,
       "sourceKind": "automatic",
@@ -539,7 +562,7 @@
       "fit": "Strong",
       "url": "https://jobs.smartrecruiters.com/Playtech/744000155730880",
       "notes": "Automatic discovery from published employer job board. Check full requirements and country eligibility.",
-      "checked": "2026-11-09",
+      "checked": "2026-11-10",
       "verified": false,
       "liveFeed": true,
       "sourceKind": "automatic",
@@ -562,7 +585,7 @@
       "fit": "Relevant",
       "url": "https://jobs.smartrecruiters.com/Playtech/744000154412789",
       "notes": "Automatic discovery from published employer job board. Check full requirements and country eligibility.",
-      "checked": "2026-11-09",
+      "checked": "2026-11-10",
       "verified": false,
       "liveFeed": true,
       "sourceKind": "automatic",
@@ -585,7 +608,7 @@
       "fit": "Relevant",
       "url": "https://jobs.lever.co/oddin/49238ee3-04ab-4f8c-bb8d-59d4edb18a45",
       "notes": "Automatic discovery from published employer job board. Check full requirements and country eligibility.",
-      "checked": "2026-11-09",
+      "checked": "2026-11-10",
       "verified": false,
       "liveFeed": true,
       "sourceKind": "automatic",
@@ -608,7 +631,7 @@
       "fit": "Strong",
       "url": "https://enjoygaming.recruitee.com/o/senior-sound-designer-slotslive-casino",
       "notes": "Automatic discovery from published employer job board. Check full requirements and country eligibility.",
-      "checked": "2026-11-09",
+      "checked": "2026-11-10",
       "verified": false,
       "liveFeed": true,
       "sourceKind": "automatic",
@@ -631,7 +654,7 @@
       "fit": "Relevant",
       "url": "https://job-boards.greenhouse.io/betsson/jobs/7566370",
       "notes": "Automatic discovery from published employer job board. Check full requirements and country eligibility.",
-      "checked": "2026-11-09",
+      "checked": "2026-11-10",
       "verified": false,
       "liveFeed": true,
       "sourceKind": "automatic",
